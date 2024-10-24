@@ -1,14 +1,13 @@
 :root {
 	--primary-color: #e8d22f;
 	--secondary-color: #000000;
-	--gradient: to top, var(--primary-color) 12%, #030205 20%, transparent 30%,
-		transparent 77%, #c7c5c8 80%, var(--primary-color) 90%;
+	--tirtiary-color: #c7c5c8;
 }
 
 body {
 	background-color: var(--secondary-color);
 	margin: 10px auto 30px auto;
-	font-family: "Alfa Slab One", serif;
+	font-family: "Oswald", sans-serif;
 }
 
 .container {
@@ -22,16 +21,6 @@ body {
 	flex: 2;
 	flex-direction: column;
 	display: flex;
-}
-
-aside {
-	background-color: aliceblue;
-	padding: 5px;
-	flex: 1;
-	margin: 5px;
-	min-width: 300px;
-	max-width: 846px;
-	background-color: var(--primary-color);
 }
 
 header {
@@ -61,8 +50,8 @@ header {
 
 h1 {
 	text-align: center;
-	color: #c7c5c8;
-	font-size: 37px;
+	color: var(--tirtiary-color);
+	font-size: 45px;
 	position: absolute;
 	bottom: 105px;
 	left: 20px;
@@ -82,4 +71,50 @@ main {
 	min-width: 500px;
 	max-width: 846px;
 	background-color: var(--primary-color);
+}
+
+aside {
+	padding: 5px;
+	flex: 1;
+	margin: 5px;
+	min-width: 300px;
+	max-width: 846px;
+	background-color: transparent;
+}
+
+h3 {
+	text-align: center;
+	color: var(--tirtiary-color);
+}
+
+.episode-container {
+	border-top: solid 3px var(--primary-color);
+	padding: 5px;
+	color: var(--tirtiary-color);
+	margin-bottom: 10px;
+}
+
+.episode-main {
+	display: flex;
+}
+
+.logo {
+	max-width: 70px;
+	margin: 10px;
+}
+
+button {
+	display: block;
+	margin: 0 auto;
+	background-color: var(--primary-color);
+	color: var(--secondary-color);
+	border: none;
+	padding: 5px 20px;
+	border: solid 2px var(--primary-color);
+	transition: all 250ms ease-in-out;
+}
+
+button:hover {
+	color: var(--primary-color);
+	background-color: transparent;
 }

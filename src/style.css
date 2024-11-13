@@ -7,6 +7,7 @@
 body {
 	background-color: var(--secondary-color);
 	font-family: "Oswald", sans-serif;
+	color: var(--tirtiary-color);
 }
 
 .container {
@@ -16,6 +17,7 @@ body {
 
 h2 {
 	background-color: var(--primary-color);
+	color: var(--secondary-color);
 	font-size: 18px;
 	padding: 5px;
 	text-align: center;
@@ -26,15 +28,8 @@ img {
 	max-width: 100%;
 }
 
-aside {
-	padding: 5px;
-	width: 100%;
-	background-color: transparent;
-}
-
 h3 {
 	text-align: center;
-	color: var(--tirtiary-color);
 }
 
 p {
@@ -44,7 +39,6 @@ p {
 .episode-container {
 	border-top: solid 3px var(--primary-color);
 	padding: 5px;
-	color: var(--tirtiary-color);
 	margin-bottom: 10px;
 }
 
@@ -64,7 +58,6 @@ p {
 	text-decoration: none;
 	background-color: var(--primary-color);
 	color: var(--secondary-color);
-	border: none;
 	padding: 5px 20px;
 	max-width: 130px;
 	border: solid 2px var(--primary-color);
@@ -77,11 +70,8 @@ p {
 }
 
 main {
-	padding: 5px;
-	margin: 5px;
-	background-color: transparent;
+	padding-top: 20px;
 	border-top: solid 3px var(--primary-color);
-	color: var(--tirtiary-color);
 }
 
 h4 {

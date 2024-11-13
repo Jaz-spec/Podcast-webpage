@@ -57,7 +57,7 @@ p {
 	margin: 10px;
 }
 
-a {
+.episode-container a {
 	display: block;
 	margin: 0 auto;
 	text-align: center;
@@ -71,7 +71,7 @@ a {
 	transition: all 250ms ease-in-out;
 }
 
-a:hover {
+.episode-container a:hover {
 	color: var(--primary-color);
 	background-color: transparent;
 }
@@ -89,10 +89,26 @@ h4 {
 	padding-top: 10px;
 }
 
+.reveiw {
+	color: var(--primary-color);
+	margin-bottom: 20px;
+	text-align: center;
+	font-size: 25px;
+}
+
+small {
+	font-size: medium;
+	opacity: 0.8;
+}
+
 footer {
 	background-color: var(--primary-color);
 	color: var(--secondary-color);
 	padding: 20px;
+}
+
+.git-link {
+	color: var(--secondary-color);
 }
 
 @media (min-width: 1200px) {
@@ -116,12 +132,12 @@ footer {
 		margin-left: 1vh;
 		flex: 1;
 	}
-	main {
+	.about-container {
 		display: flex;
 		flex-wrap: wrap;
 	}
 
-	.main-paragraph {
+	.about-paragraph {
 		flex: 1;
 	}
 
@@ -129,5 +145,13 @@ footer {
 		flex: 1;
 		max-width: 60%;
 		margin-left: 1vh;
+	}
+
+	.reveiw-container {
+		display: flex;
+	}
+
+	.reveiw {
+		flex: 1;
 	}
 }

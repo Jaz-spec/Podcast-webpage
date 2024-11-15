@@ -13,8 +13,156 @@
 		<link
 			href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Spicy+Rice&display=swap"
 			rel="stylesheet" />
-		<link rel="stylesheet" href="src/style.css" />
 		<title>NO SUCH THING AS A FISH</title>
+		<style>
+			:root {
+				--primary-color: #e8d22f;
+				--secondary-color: #000000;
+				--tirtiary-color: #c7c5c8;
+			}
+
+			body {
+				background-color: var(--secondary-color);
+				font-family: "Oswald", sans-serif;
+				color: var(--tirtiary-color);
+			}
+
+			.container {
+				width: 90%;
+				margin: 2vh auto;
+			}
+
+			h2 {
+				background-color: var(--primary-color);
+				color: var(--secondary-color);
+				font-size: 18px;
+				padding: 5px;
+				text-align: center;
+			}
+			img {
+				display: block;
+				margin: 0 auto 3vh auto;
+				max-width: 100%;
+			}
+
+			h3 {
+				text-align: center;
+			}
+
+			p {
+				opacity: 0.7;
+			}
+
+			.episode-container {
+				border-top: solid 3px var(--primary-color);
+				padding: 5px;
+				margin-bottom: 10px;
+			}
+
+			.episode-main {
+				display: flex;
+			}
+
+			.logo {
+				max-width: 70px;
+				margin: 10px;
+			}
+
+			.episode-container a {
+				display: block;
+				margin: 0 auto;
+				text-align: center;
+				text-decoration: none;
+				background-color: var(--primary-color);
+				color: var(--secondary-color);
+				padding: 5px 20px;
+				max-width: 130px;
+				border: solid 2px var(--primary-color);
+				transition: all 250ms ease-in-out;
+			}
+
+			.episode-container a:hover {
+				color: var(--primary-color);
+				background-color: transparent;
+			}
+
+			main {
+				padding-top: 20px;
+				border-top: solid 3px var(--primary-color);
+			}
+
+			h4 {
+				text-align: center;
+				padding-top: 10px;
+			}
+
+			.reveiw {
+				color: var(--primary-color);
+				margin-bottom: 20px;
+				text-align: center;
+				font-size: 25px;
+			}
+
+			small {
+				font-size: medium;
+				opacity: 0.8;
+			}
+
+			footer {
+				background-color: var(--primary-color);
+				color: var(--secondary-color);
+				padding: 20px;
+			}
+
+			.git-link {
+				color: var(--secondary-color);
+			}
+
+			@media (min-width: 1200px) {
+				.container {
+					max-width: 70%;
+					display: flex;
+					flex-direction: column;
+				}
+
+				.row-container {
+					flex: 4;
+					display: flex;
+					flex-wrap: wrap;
+				}
+
+				header {
+					max-width: 800px;
+					flex: 4;
+				}
+				aside {
+					margin-left: 1vh;
+					flex: 1;
+				}
+				.about-container {
+					display: flex;
+					flex-wrap: wrap;
+				}
+
+				.about-paragraph {
+					flex: 1;
+				}
+
+				.about-image {
+					flex: 1;
+					max-width: 60%;
+					margin-left: 1vh;
+				}
+
+				.reveiw-container {
+					display: flex;
+				}
+
+				.reveiw {
+					flex: 1;
+				}
+			}
+		</style>
 	</head>
 	<body>
 		<div class="container">
@@ -93,6 +241,36 @@
 				>GitHub</a
 			>
 		</footer>
-		<script src="src/script.js"></script>
+		<script>
+			let episodeTitles = [
+				"556: No Such Thing As A Ghost In Blue Jeans",
+				"555: No Such Thing As Catherine Of Croydon",
+				"554: No Such Thing As A Dragonfish At The Opticians",
+			];
+			let episodeDescriptions = [
+				"Live from the Theatre Royal, Drury Lane, Dan, James, Anna and Andy discuss failure, theatrics, fraud and a highly litigious member of the Trump family",
+				"Live from the Theatre Royal, Drury Lane, Dan, James, Anna and Andy discuss cassettes, cruising, cliffs and clowns",
+				"Live from Cardiff Dan, James, Anna and Andy discuss wax, water, Persians and perverts",
+			];
+
+			let episode = document.querySelector("#asideContainer");
+
+			episodeTitles.forEach((title, index) => {
+				let description = episodeDescriptions[index];
+
+				console.log(title, description);
+				episode.innerHTML += `<div class="episode-container" id="episodeContainer">
+    <h4 id="episodeTitle">${title}</h4>
+<div class="episode-main">
+    <img
+        class="logo"
+        src=" https://s3.amazonaws.com/shecodesio-production/uploads/files/000/148/428/original/nosuchthinglogo.png?1729797897https://s3.amazonaws.com/shecodesio-production/uploads/files/000/148/428/original/nosuchthinglogo.png?1729797897"
+        alt="" />
+    <p id="episodeDescription">${description}</p>
+</div>
+<a href="https://music.youtube.com/search?q=no+such+thing+as+a+fish" target=_blank >Listen now</a>
+</div>`;
+			});
+		</script>
 	</body>
 </html>
